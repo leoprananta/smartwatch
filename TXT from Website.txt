@@ -1,0 +1,83 @@
+http://localhost/vex/       NANTI DIGANTI BASE URL
+
+file css/js, dll ada di folder plugins, js, scss. Selebihnya hanya file html
+
+
+Di setiap file html ada header & footer
+
+Header isinya link :
+
+    Home        -> index.html
+    Products    -> products/index.html
+    Contact     -> contact/index.html
+    Login       -> login/index.html
+
+Footer isinya link :
+
+    Contact     -> contact/index.html
+    Terms&Cond  -> terms-confitions/index.html
+    Priv        -> privacy-policy/index.html
+
+
+
+Ada 8 file html
+1. Home        -> index.html
+2. Products    -> products/index.html
+3. Contact     -> contact/index.html
+4. Login       -> login/index.html
+5. Contact     -> contact/index.html
+6. Terms&Cond  -> terms-confitions/index.html
+7. Priv        -> privacy-policy/index.html
+8. Product-1   -> products/product-1/index.html
+
+
+Semua static, yg dinamis ada di halaman home, produtcs(all products) dan products-1(tampilan detail). 
+Atau ada di poin 1, 2, dan 8 di atas.
+
+Poin 1 adalah home
+Poin 2 itu tampilan semua product
+Poin 8 itu tampilan detail product
+
+Nanti tinggal custom php di 3 file itu karena menampilkan dinamis dari database :
+1. Home        -> tampilan gambar product dari database
+2. Products    -> tampilan semua product di halaman produtcs
+3. detail      -> tampilan detail product
+
+
+Login seperti biasa
+Tambah, edit, hapus produk
+
+Tabel user(untuk admin saja)          -> id, username, password
+Tabel produk                          -> id, name, color, size, description, price, image
+Tabel testimoni                       -> id, name, job, testimoni, image
+
+
+
+
+
+FLOW APLIKASI
+
+ADMIN 
+
+login -> dashboard -> menu produk
+                            menu produk -> list produk -> bisa tambah, edit, hapus
+logout
+
+
+USER
+
+Home menampilkan :
+1. list gambar produk saja       : SELECT image FROM tb_produk
+2. testimoni                     : SELECT * FROM tb_testimoni
+
+Products menampilkan list produk :      SELECT image, name, price FROM tb_produk
+1. Gambar
+2. Nama
+3. Harga
+
+Detail menampilkan               :      SELECT * FROM tb_produk
+1. Nama
+2. Warna
+3. Ukuran
+4. Deskripsi
+5. Gambar
